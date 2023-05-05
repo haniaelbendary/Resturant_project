@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    MG restaurant
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body {
+  background-image: url('backg.jpg'); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%; 
+  
+}
+
+
+#clockDisplay{
+	margin:0px auto;
+	width: 500px;
+	height: 100px;
+	color: #fafafa;
+  padding-top: 30px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:30px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+:target{
+  
+}
+  
+
+h3  {
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  
+}
+p{
+  color: #ffffffb7;
+  text-align: center;
+}
+p1{
+    font-family: Copperplate, Papyrus, fantasy;
+    color:#B9BE46 ;
+    font-size: 50px
+}
+p2{
+  font-family: Copperplate, Papyrus, fantasy;
+    font-size: 50px;
+    color:#f4f2f2b7
+}
+p4{
+    color:#ffffff ;
+    font-size: 20px
+}
+ul {
+     background-color: rgba(189, 151, 102, 0.384);
+}
+
+li {
+  float:right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #ffffff;
+}
+
+fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+</style>
+</head>
+<body>
+  <form >
+  <input type ="search" placeholder="Search here">
+  <input type ="submit" value="Search">
+  </form>
+<ul>
+      <li><a href="web4.html"> Menu</a></li>
+        <li><a href="webpage3.html">Conatct</a></li>
+        <li><a href="link2.html">Registration</a></li>
+        <li><a class="active" href="#about">Home</a></li>
+      </ul>   
+
+<center> <div id="clockDisplay" class="clockStyle"></div> </center>
+<br><br>
+<script>
+function renderTime(){
+	var currentTime = new Date();
+	var diem = "AM";
+	var h = currentTime.getHours();
+	var m = currentTime.getMinutes();
+	var s = currentTime.getSeconds();
+	
+	if(h == 0){
+		h = 12;
+	}else if(h > 12){
+		h = h - 12;
+		diem = "PM"
+	}
+	if(h < 10){
+		h = "0" + h;
+	}
+	if(m < 10){
+		m = "0" + m;
+	}
+	if(s < 10){
+		s = "0" + s;
+	}
+	var myClock = document.getElementById('clockDisplay');
+	myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+	setTimeout('renderTime()', 1000); 
+}
+renderTime();
+</script>
+
+<center> <p1 ><i><b> Welcome to our restaurant </i></b></p1> </center>
+<br><br><br>
+<center> <p2> <i>Reservation Now</i></p2> </center>
+<br> 
+<h3> Opening Hours</h4>
+<p>All days from 3PM-2AM</p> <br>
+<center><a style="background-color: rgba(0, 0, 0 , 0.5);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;" href="page2.html" >Login </a></center>
+<br><br>
+  <p4> Follow us :</p4><br>
+  <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-google"></a>
+
+  <button type="button" class="btn">Basic</button>
+</body>
+</html>
